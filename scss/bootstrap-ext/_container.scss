@@ -1,0 +1,58 @@
+
+
+.grid-container {
+	@extend .container;
+	padding: 0;
+}
+
+.page-container {
+	width:100%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+@mixin padding-container {
+	padding-right: var(--padding-container);
+	padding-left: var(--padding-container);
+}
+
+.padding-container {
+	@include padding-container;
+}
+
+@each $breakpoint in map-keys($grid-breakpoints) {
+	@include media-breakpoint-up($breakpoint) {
+		$infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+		.padding-container#{$infix} {
+			@include padding-container
+		}
+	}
+}
+
+@each $breakpoint in map-keys($grid-breakpoints) {
+	@include media-breakpoint-down($breakpoint) {
+		$infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+		.padding-container-down#{$infix} {
+			@include padding-container
+		}
+	}
+}
+
+
+@mixin margin-container {
+	margin-right: var(--padding-container);
+	margin-left: var(--padding-container);
+}
+
+.margin-container {
+	@include margin-container;
+}
+
+@each $breakpoint in map-keys($grid-breakpoints) {
+	@include media-breakpoint-up($breakpoint) {
+		$infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+		.margin-container#{$infix} {
+			@include margin-container
+		}
+	}
+}

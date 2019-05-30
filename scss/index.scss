@@ -1,0 +1,30 @@
+@import './bootstrap/index';
+@import './bootstrap-ext/container';
+@import './bootstrap-ext/root';
+
+@import './text';
+@import './button';
+
+
+body {
+	color: var(--onwhite-normal);
+	font-style: normal;
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-font-smoothing: antialiased;	
+}
+
+.w100 { width: 100%; }
+.mw100 { min-width: 100%; }
+.wauto { width: auto; }
+.wrap { white-space: pre-wrap; }
+.nowrap { white-space: nowrap; }
+
+
+@each $breakpoint in map-keys($grid-breakpoints) {
+	@include media-breakpoint-up($breakpoint) {
+		$infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+		.wrap#{$infix} {
+			white-space: pre-wrap;
+		}
+	}
+}

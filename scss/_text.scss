@@ -1,0 +1,141 @@
+@function rhythm-shift($font-size, $line-height, $cap-height) {
+	$offset: ($line-height - $cap-height * $font-size) / 2;
+	@return round($offset);
+}
+
+@mixin fp($font-size, $line-height, $cap-height) {
+	$offset: rhythm-shift($font-size, $line-height, $cap-height);
+	font-size: $font-size;
+	line-height: $line-height;
+	transform: translateY($offset);
+}
+
+@mixin f($font-size, $line-height, $offset) {
+	font-size: $font-size;
+	line-height: $line-height;
+	transform: translateY($offset);
+}
+
+h1, h2, h3, h4, h5, h6, p, ol, ul, dl {
+	margin: 0;
+	font-family: 'Lato', sans-serif;
+	@include f(16px, 24px, 6px);
+	font-weight: 400;
+}
+
+
+@mixin oswald {	
+	font-family: 'Oswald', sans-serif;
+	font-weight: 400;
+  	> strong {
+	  font-weight: 500;
+	}
+}
+
+h1 {
+	@include oswald;
+
+	@include f(32px, 40px, 6px);
+	@include media-breakpoint-up(lg) {
+		@include f(48px, 64px, 6px);
+	}
+
+	&.hero-1 {
+		// letter-spacing: -0.09em;
+		@include f(48px, 56px, 10px);
+		@include media-breakpoint-up(lg) {
+			@include f(72px, 72px, 4px);
+		}
+	}
+
+
+	&.cursive-1 {
+		font-family: 'Permanent Marker', cursive;
+		@include f(32px, 40px, 6px);
+		@include media-breakpoint-up(md) {
+			@include f(48px, 64px, 6px);
+		}
+		font-weight: 400;
+		letter-spacing: -0.05em;
+	}
+
+}
+
+h2 {
+	@include oswald;
+
+	&.hero-2 {
+		@include f(40px, 48px, 6px);
+		@include media-breakpoint-up(lg) {
+			@include f(72px, 88px, 6px);
+		}
+	}
+
+	@include f(32px, 40px, 6px);
+	@include media-breakpoint-up(lg) {
+		@include f(40px, 48px, 6px);
+	}
+}
+
+h2 {
+	@include oswald;
+	@include f(40px, 48px, 6px);
+}
+
+h3 {
+	@include oswald;
+	@include f(20px, 24px, 3px);
+	@include media-breakpoint-up(md) {
+		@include f(32px, 40px, 6px);
+	}
+	@include media-breakpoint-up(lg) {
+		@include f(40px, 48px, 6px);
+	}
+}
+
+.h4, h4 {
+	@include oswald;
+	@include f(20px, 24px, 4px);
+}
+
+.font-light {
+	font-weight: 300;
+}
+
+
+h5 {
+	font-family: 'Lato', sans-serif;
+	@include f(16px, 24px, 6px);
+	font-weight: 700;
+  
+	@include media-breakpoint-up(lg) {
+		@include oswald;
+		@include f(32px, 40px, 6px);
+	}
+}
+
+h6 {
+	font-family: 'Oswald', sans-serif;
+	@include f(14px, 24px, 6px);
+	font-weight: 400;
+  
+	@include media-breakpoint-up(lg) {
+		@include f(20px, 24px, 3px);
+	}
+}
+
+.small {
+	font-family: 'Lato', sans-serif;
+	@include f(12px, 16px, 3px);
+	font-weight: 400;
+}
+
+.small-flex {
+	font-family: 'Lato', sans-serif;
+	@include f(12px, 16px, 3px);
+	font-weight: 400;
+	@include media-breakpoint-up(lg) {
+		@include f(16px, 24px, 6px);
+	}
+}
+

@@ -1,0 +1,70 @@
+// !!!NOTICE: copy in theme.js
+
+$spacer: 24px;
+$spacer-sm: 8px;
+
+$border-radius: 3px;
+
+$grid-gutter-width:           8px;
+$grid-breakpoints: (
+  xs: 0,
+  sm: 450px,
+  md: 768px,
+  lg: 1024px,
+  xl: 1440px
+);
+
+
+$container-max-widths: (
+  xs: 736px,
+  sm: 736px, // 768 - 16x2 = 736
+  md: 1023px,
+  lg: 1364px,
+  xl: 1364px
+);
+
+$font-family-base: Lato;
+$font-size-base: 16px;
+$font-weight-base: 400;
+// "primary-gradient": linear-gradient(180deg, #FECF33 0%, #E6B000 100%),
+
+$theme-colors: (
+  "primary": rgb(253, 194, 1),
+  "primary-1": #E6B000,
+  "primary-2": #FECF33,
+  "secondary": rgb(25, 25, 25),
+  "secondary-1": #2B2B2B,
+  "secondary-2": #979797,
+  "tertiary": rgb(0, 204, 204),
+  "success": rgb(0, 204, 0),
+  "warning": rgb(254, 207, 51),
+  "danger": rgb(252, 0, 0),
+  "link": rgb(76, 118, 254),
+  "dark-normal": rgba(0, 0, 0, 0.87),
+  "dark-muted": rgba(0, 0, 0, 0.54),
+  "dark-disabled": rgba(0, 0, 0, 0.38),
+  "dark-border": rgba(0, 0, 0, 0.12),
+  "light-normal": rgb(255, 255, 255),
+  "light-muted": rgba(255, 255, 255, 0.7),
+  "light-disabled": rgba(255, 255, 255, 0.5),
+  "light-border": rgba(255, 255, 255, 0.12),
+  "onwhite-normal": rgb(77, 77, 77),
+  "onwhite-muted": rgb(151, 151, 151),
+  "onwhite-disabled": rgb(179, 179, 179),
+  "onwhite-border": rgb(225, 225, 225)
+);
+
+
+.color-primary { color: var(--primary); }
+.color-dark-normal { color: var(--dark-normal); }
+.color-dark-muted { color: var(--dark-muted); }
+.color-dark-disabled { color: var(--dark-disabled); }
+.color-light-normal { color: var(--light-normal); }
+.color-light-muted { color: var(--light-muted); }
+.color-light-disabled { color: var(--light-disabled); }
+.color-onwhite-normal { color: var(---onwhite-normal); }
+.color-onwhite-muted { color: var(--onwhite-muted); }
+.color-onwhite-disabled { color: var(--onwhite-disabled); }
+.color-link { color: var(--link); }
+
+$link-color: var(--link);

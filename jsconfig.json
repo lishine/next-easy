@@ -1,0 +1,15 @@
+{
+	"compilerOptions": {
+		"baseUrl": ".",
+		"target": "ES6"
+	},
+	"exclude": [
+		"**/node_modules/**",
+		"**/.next/**",
+		"**/dist/**",
+		"**/db/**",
+		"**/.history/**",
+		"**/.git/**",
+		"**/not_used/**",
+	]
+}

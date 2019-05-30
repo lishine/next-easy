@@ -1,0 +1,13 @@
+:root {
+	--border-radius: #{$border-radius};
+	--spacer: #{$spacer};
+	--spacer-sm: #{$spacer-sm};
+	--grid-gutter-width: #{$grid-gutter-width};
+	
+	--padding-container: 16px;
+	@include media-breakpoint-up(md) {
+		--padding-container: 32px;
+	}
+
+}
+	
